@@ -725,6 +725,11 @@ class Kenwood_M60_Radio(chirp_common.CloneModeRadio,
                                  bool(sett.clone)))
         basic.append(clone)
 
+        ohdecode = RadioSetting("settings.off_hook_decode", "Off hook decode",
+                                RadioSettingValueBoolean(
+                                    bool(sett.off_hook_decode)))
+        basic.append(ohdecode)
+
         # front keys
         rs = RadioSettingValueList(KEYS.values(),
                                    KEYS[int(sett.kMON)])

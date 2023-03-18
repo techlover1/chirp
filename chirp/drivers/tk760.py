@@ -71,8 +71,9 @@ struct {
     u8 dealer_tuning;        // x02ec ? bit 0? 0 = off, 1 = on
     u8 clone;                // x02ed ? bit 0? 0 = off, 1 = on
     u8 unknown16[2];         // x02ee-x2ef
-    u8 unknown17[16];      // x02f0
-    u8 unknown18[5];       // x0300
+    u8 unknown17[6];        // x02f0
+    u8 off_hook_scan;       // x02f6
+    u8 unknown18[14];       // x02f7-x0304
     u8 clear2transpond;      // x0305 byte 0 = off, 1 = on
     u8 off_hook_decode;      // x0306 byte 0 = off, 1 = on
     u8 off_hook_hornalert;   // x0307 byte 0 = off, 1 = on

@@ -58,7 +58,7 @@ struct {
     u8 active[4];            // x02d0
     u8 scan[4];              // x02d4
     u8 unknown12[8];         // x02d8
-    u8 unknown13;          // x02e0
+    u8 data_ptt_qt;          // 0=off 1=on
     u8 kMON;                 // 0x02d1 MON Key
     u8 kA;                   // 0x02d2 A Key
     u8 kSCN;                 // 0x02d3 SCN Key
@@ -67,7 +67,8 @@ struct {
     u8 min_vol;              // x02e6 byte 0-31 0 = off
     u8 poweron_tone;         // x02e7 power on tone 0 = off, 1 = on
     u8 tot;                  // x02e8 Time out Timer 0 = off, 1 = 30s (max 300)
-    u8 unknown15[2];         // x02e9-x02ea
+    u8 acc_hook_chs;         // x02e9 0=chs 1=hook
+    u8 signalling;           // x02ea 0=or 1=and
     u8 home_channel;         // x02eb x01-x20
     u8 dealer_tuning;        // x02ec ? bit 0? 0 = off, 1 = on
     u8 clone;                // x02ed ? bit 0? 0 = off, 1 = on
@@ -85,7 +86,9 @@ struct {
     u8 off_hook_decode;      // x0306 byte 0 = off, 1 = on
     u8 off_hook_hornalert;   // x0307 byte 0 = off, 1 = on
     u8 unknown19[8];         // x0308-x030f
-    u8 unknown20[16];      // x0310
+    u8 unknown20[7];         // x0310-x0316
+    u8 scramber_code;        // x0317 code=1-4
+    u8 unknown21[8];         // x0318
 } settings;
 """
 

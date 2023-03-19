@@ -88,7 +88,10 @@ struct {
     u8 unknown19[8];         // x0308-x030f
     u8 unknown20[7];         // x0310-x0316
     u8 scramber_code;        // x0317 code=1-4
-    u8 unknown21[8];         // x0318
+    u8 2tone_auto_reset:4,   // x0318 E=off F=on
+       2tone_action:2,       // 0=off 1=alert tone 2=transpond
+       2tone_group_call:2;   // 0-2
+    u8 unknown21[8];         // x0319
 } settings;
 """
 

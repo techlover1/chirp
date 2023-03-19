@@ -67,12 +67,13 @@ struct {
     u8 min_vol;              // x02e6 byte 0-31 0 = off
     u8 poweron_tone;         // x02e7 power on tone 0 = off, 1 = on
     u8 tot;                  // x02e8 Time out Timer 0 = off, 1 = 30s (max 300)
-    u8 unknown15[3];         // x02e9-x02eb
+    u8 unknown15[2];         // x02e9-x02ea
+    u8 home_channel;         // x02eb x01-x20
     u8 dealer_tuning;        // x02ec ? bit 0? 0 = off, 1 = on
     u8 clone;                // x02ed ? bit 0? 0 = off, 1 = on
     u8 unknown16;            // x02ee
     u8 priority_mode;       // x02ef 0=none 1=fixed 2=selected
-    u8 unknown17;          // x02f0
+    u8 priority_channel;    // x02f0 x01-x20
     u8 lookback_a;          // x02f1 1=0.5s 2=0.6s (min 0.5s max 5.0s)
     u8 lookback_b;          // x02f2 1=0.5s 2=1.0s (min 0.5s max 5.0s)
     u8 revert_channel;      // x02f3 1=selected 2=last_called 3=last_used 4=selected+talkback
